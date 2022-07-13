@@ -1,5 +1,5 @@
 ```mermaid
-flowchart LR
+flowchart TD
 
   This_is_an_action{{This is an action}}
   
