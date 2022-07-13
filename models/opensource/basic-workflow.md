@@ -5,6 +5,7 @@ flowchart LR
   
   %% People and outcomes
   Developer([Developer]) 
+  LocalSourceCode([Local Source Code])
   SourceCode([Source Code])
   SoftwareRelease([Software Release])
   SoftwarePackage([Software Package])
@@ -30,7 +31,7 @@ flowchart LR
   
   %% Landscape
   
-  Developer-- Uses -->DevMachineAccount-- To access -->DevMachine
+  Developer-- Uses -->DevMachineAccount-- To access -->DevMachine-- To work on-->LocalSourceCode-- Pushes to -->ProjectRepo
   Developer-- Uses -->DevRepoAccount-- To access -->DevRepo
   Developer-- Uses -->ProjectRepoAccount-- To access -->ProjectRepo-- To Publish -->SourceCode
   Developer-- Uses -->ProjectCICDAccount-- To access -->ProjectCICD-- To Build -->SoftwareRelease & SoftwarePackage
