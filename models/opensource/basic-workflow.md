@@ -41,8 +41,8 @@ flowchart TD
   Developer-- Uses -->ProjectCICDAccount-- To access -->ProjectCICD-- Uses -->SourceCode-- To Build -->SoftwareRelease & SoftwarePackage
   Developer-- Uses -->ProjectFilesAccount-- To access -->ProjectFiles-- To Publish -->SoftwareRelease
   Developer-- Uses -->PackageHandlingPlatformAccount-- To access -->PackageHandlingPlatform-- To Publish -->SoftwarePackage
-  DependentApp-- Uses -->SoftwarePackage
-  Distribution-- Uses -->SoftwareRelease
-  Container-- Uses -->SoftwarePackage & SoftwareRelease
+  SoftwarePackage-- Used By -->DependentApp
+  SoftwareRelease-- Used By -->Distribution
+  SoftwarePackage & SoftwareRelease-- Used By -->Container
   
 ```
