@@ -12,6 +12,7 @@ flowchart TD
   SoftwarePackage([Software Package])
   DependentApp([Dependent Application])
   Distribution([Distribution])
+  Container([Container])
   
 
   %% Components
