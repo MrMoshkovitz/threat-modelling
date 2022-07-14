@@ -38,7 +38,7 @@ flowchart TD
   Developer-- Uses -->DevMachineAccount-- To access -->DevMachine-- To work on-->LocalSourceCode-- Pushes to -->ProjectRepo
   Developer-- Uses -->DevRepoAccount-- To access -->DevRepo
   Developer-- Uses -->ProjectRepoAccount-- To access -->ProjectRepo-- To Publish -->SourceCode
-  Developer-- Uses -->ProjectCICDAccount-- To access -->ProjectCICD-- To Build -->SoftwareRelease & SoftwarePackage
+  Developer-- Uses -->ProjectCICDAccount-- To access -->ProjectCICD-- Uses -->SourceCode-- To Build -->SoftwareRelease & SoftwarePackage
   Developer-- Uses -->ProjectFilesAccount-- To access -->ProjectFiles-- To Publish -->SoftwareRelease
   Developer-- Uses -->PackageHandlingPlatformAccount-- To access -->PackageHandlingPlatform-- To Publish -->SoftwarePackage
   DependentApp-- Uses -->SoftwarePackage
