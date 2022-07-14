@@ -4,11 +4,15 @@ flowchart TD
   This_is_an_action{{This is an action}}
   
   %% People and outcomes
-  Developer([Developer]) 
+  Developer([Developer])
+  EndUser([End User])
   LocalSourceCode([Local Source Code])
   SourceCode([Source Code])
   SoftwareRelease([Software Release])
   SoftwarePackage([Software Package])
+  DependentApp([Dependent Application])
+  Distribution([Distribution])
+  
 
   %% Components
   DevMachine[Developer Machine]
@@ -37,6 +41,8 @@ flowchart TD
   Developer-- Uses -->ProjectCICDAccount-- To access -->ProjectCICD-- To Build -->SoftwareRelease & SoftwarePackage
   Developer-- Uses -->ProjectFilesAccount-- To access -->ProjectFiles-- To Publish -->SoftwareRelease
   Developer-- Uses -->PackageHandlingPlatformAccount-- To access -->PackageHandlingPlatform-- To Publish -->SoftwarePackage
-  
+  DependentApp-- Uses -->SoftwarePackage
+  Distribution-- Uses -->SoftwareRelease
+  Container-- Uses -->SoftwarePackage & SoftwareRelease
   
 ```
